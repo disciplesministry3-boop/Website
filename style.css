@@ -1,0 +1,417 @@
+/* ---------- CSS Variables ---------- */
+:root {
+  --primary: #6d5a7a; /* Lavender / Purple */
+  --secondary: #b24a6f; /* Wine / Deep Pink */
+  --dark: #1f1f1f; /* Text */
+  --light: #ffffff; /* Background */
+  --soft: #f2eef5; /* Light lavender background */
+  --hover-secondary: #8f3758; /* Hover color for buttons/links */
+}
+
+/* ---------- Global Styles ---------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  line-height: 1.6;
+  background-color: var(--soft);
+  color: var(--dark);
+}
+
+ul {
+  margin-left: 1.2rem;
+  margin-top: 1rem;
+}
+
+li {
+  margin-bottom: 0.8rem;
+}
+.layout-row {
+  display: flex;
+  gap: 2.5rem;
+  align-items: stretch;
+}
+
+.content-box {
+  flex: 1;
+  background: var(--light);
+  padding: 2rem;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease;
+}
+
+.content-box:hover {
+  transform: translateY(-6px);
+}
+
+/* ---------- Hero Section ---------- */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 4rem 2rem;
+
+  background:
+    linear-gradient(rgba(109, 90, 122, 0.85), rgba(109, 90, 122, 0.85)),
+    url("./ImagesandVideos/KenyaChurch.jpg") center / cover no-repeat;
+
+  color: var(--light);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  max-width: 900px;
+}
+
+.motto {
+  font-size: 1.3rem;
+  max-width: 700px;
+}
+.hero-actions {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn-primary {
+  background: var(--secondary);
+  color: var(--light);
+  padding: 0.7rem 1.4rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn-secondary {
+  border: 2px solid var(--light);
+  color: var(--light);
+  padding: 0.7rem 1.4rem;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.scroll-down {
+  margin-top: 3rem;
+  font-size: 1.2rem;
+  opacity: 0.8;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+/* ---------- Sections ---------- */
+.section {
+  width: 100%;
+  margin: 3rem 0;
+  padding: 4rem 6%;
+  background: var(--light);
+}
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary);
+  text-align: center;
+}
+
+.section #contactParagraph {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.section:nth-child(even) {
+  background: var(--soft);
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Two-column row */
+.layout-row {
+  display: flex;
+  gap: 3rem;
+  align-items: stretch;
+}
+
+.content-box {
+  flex: 1;
+  background: var(--light);
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.content-box:hover {
+  transform: translateY(-8px);
+}
+
+/* ---------- Grid & Cards ---------- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.card {
+  background: var(--light);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 5px solid var(--secondary);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  transition: 0.3s ease;
+}
+
+.card h3 {
+  margin-bottom: 0.5rem;
+  color: var(--primary);
+}
+
+/* ---------- Carousel  ---------- */
+.carousel-inner img,
+.carousel-inner video {
+  width: 100%; /* full width */
+  height: auto; /* maintain aspect ratio */
+  border-radius: 8px;
+}
+
+.carousel-map-container {
+  display: flex;
+  gap: 2rem; /* spacing between carousel and map */
+  flex-wrap: wrap; /* stacks on smaller screens */
+}
+
+.carousel-wrapper,
+.map-wrapper {
+  flex: 1;
+  min-width: 300px; /* prevents them from shrinking too small */
+}
+
+.carousel-wrapper img,
+.carousel-wrapper video {
+  width: 100%;
+  height: auto; /* ensures full content visible */
+  max-height: 450px; /* optional: keeps carousel from getting too tall */
+  border-radius: 12px;
+}
+
+.map-wrapper iframe {
+  width: 100%;
+  height: 450px; /* same height as carousel for alignment */
+}
+
+/* ---------- Images ---------- */
+.section img:not(.leadershipPictures) {
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  height: 600px;
+  object-fit: cover;
+}
+
+/* ---------- Donation Section ---------- */
+.donation-section {
+  background: linear-gradient(135deg, var(--soft), #ebe4f0);
+}
+
+.donation-card {
+  background: var(--light);
+  padding: 3rem 2.5rem;
+  border-radius: 18px;
+  max-width: 720px;
+  margin: 0 auto;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.donation-lead {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 2rem;
+  line-height: 1.7;
+}
+
+/* Buttons */
+.donation-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.donation-btn {
+  padding: 0.8rem 1.8rem;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  min-width: 190px;
+  transition: all 0.25s ease;
+}
+
+/* Primary */
+.donation-btn.primary {
+  background: var(--secondary);
+  color: var(--light);
+}
+
+.donation-btn.primary:hover {
+  background: var(--hover-secondary);
+  transform: translateY(-2px);
+}
+
+/* Secondary */
+.donation-btn.secondary {
+  background: transparent;
+  color: var(--secondary);
+  border: 2px solid var(--secondary);
+}
+
+.donation-btn.secondary:hover {
+  background: var(--secondary);
+  color: var(--light);
+  transform: translateY(-2px);
+}
+
+.donation-note {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+/* ---------- Contact Info ---------- */
+#contactInfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.leadershipPictures {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #222;
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  background: var(--primary);
+  color: var(--light);
+  text-align: center;
+  padding: 1.5rem 1rem;
+  margin-top: 3rem;
+}
+
+/* ---------- Links & Buttons ---------- */
+.contact-links a,
+button {
+  background: var(--secondary);
+  color: var(--light);
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.contact-links a:hover,
+button:hover {
+  background: var(--hover-secondary);
+}
+
+/* ---------- Responsive Styles ---------- */
+
+@media (min-width: 1024px) {
+  .carousel-inner video {
+    max-height: 400px; /* shrink video to reasonable height */
+  }
+
+  .carousel-inner img {
+    max-height: 400px;
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 1023px) {
+  .carousel-inner video,
+  .carousel-inner img {
+    max-height: none; /* let it shrink naturally */
+  }
+}
+/* Tablets (≤ 900px) */
+@media (max-width: 900px) {
+  .hero {
+    padding: 2.5rem 1rem;
+  }
+
+  .section {
+    padding: 2rem 1.2rem;
+  }
+
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+}
+
+/* Phones (≤ 600px) */
+@media (max-width: 600px) {
+  body {
+    font-size: 15px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .motto {
+    font-size: 1.1rem;
+  }
+
+  .section h2 {
+    font-size: 1.3rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 1.2rem;
+  }
+
+  ul {
+    margin-left: 0.8rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .layout-row {
+    flex-direction: column;
+  }
+}
