@@ -14,6 +14,10 @@
   margin: 0;
   padding: 0;
 }
+html,
+body {
+  overflow-x: hidden;
+}
 
 body {
   font-family: "Segoe UI", Arial, sans-serif;
@@ -225,6 +229,37 @@ li {
   height: 450px; /* same height as carousel for alignment */
 }
 
+/* ---------- Impact Section ---------- */
+.impact {
+  background: linear-gradient(180deg, #ffffff, var(--soft));
+}
+
+.impact-inner {
+  max-width: 900px;
+}
+
+.impact-content {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+.impact-content p {
+  margin-bottom: 1.5rem;
+}
+
+.impact-content strong {
+  color: var(--primary);
+}
+
+.impact-signature {
+  margin-top: 2.5rem;
+  font-style: italic;
+  font-weight: 600;
+  color: var(--secondary);
+  text-align: right;
+}
+
 /* ---------- Images ---------- */
 .section img:not(.leadershipPictures) {
   border-radius: 8px;
@@ -315,7 +350,7 @@ li {
   width: 350px;
   height: 350px;
   border-radius: 50%;
-  object-fit: cover;
+  object-fit: center 20%;
   border: 4px solid #222;
 }
 
@@ -407,6 +442,15 @@ button:hover {
 
   ul {
     margin-left: 0.8rem;
+  }
+
+  .impact-content {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .impact-signature {
+    text-align: center;
   }
 }
 
